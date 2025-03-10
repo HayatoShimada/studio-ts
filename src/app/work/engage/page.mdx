@@ -1,0 +1,59 @@
+import logo from '@/images/clients/engage/logomark-dark.svg'
+import imageHero from './hero.jpg'
+import imageTeam from './team.jpg'
+
+export const caseStudy = {
+  client: 'Engage',
+  title: 'デジタル変革を加速するパートナー',
+  description:
+    'Engageは、企業のデジタル変革を支援するテクノロジーパートナーです。最先端のWeb開発、クラウドインフラ、データ分析を通じて、持続可能な成長を実現します。',
+  summary: [
+    'Engageは、企業のデジタル変革を支援するテクノロジーパートナーです。',
+    'クラウド技術、Next.jsを活用したWeb開発、データ分析基盤の構築を通じて、企業の競争力を強化します。',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2024-03',
+  service: 'Web開発、クラウドインフラ、データ分析',
+  testimonial: {
+    author: { name: '山田 太郎', role: '株式会社ABC CTO' },
+    content:
+      'Engageと協力することで、開発スピードが大幅に向上しました。特に、リアルタイムデータ処理とクラウド最適化の面で大きな成果を得ることができました。',
+  },
+}
+
+export const metadata = {
+  title: `${caseStudy.client} 事例紹介`,
+  description: caseStudy.description,
+}
+
+## 概要
+
+株式会社ABCは、リアルタイムでデータを処理し、クラウド上で最適化されたアプリケーションを開発するための支援を求めていました。Engageは、Next.jsを活用したフロントエンド開発とFirebaseを活用したクラウドインフラ構築を担当しました。
+
+また、データの即時反映を可能にするため、Firestoreとリアルタイム同期機能を実装。エンドユーザーがシームレスな体験を得られるようにしました。
+
+さらに、SEOの最適化を実施し、Google検索での可視性を向上させる施策を実施しました。その結果、検索エンジンのトラフィックが前年比で35%増加しました。
+
+## 実施内容
+
+<TagList>
+  <TagListItem>フロントエンド開発（Next.js）</TagListItem>
+  <TagListItem>クラウドインフラ（Firebase, Firestore）</TagListItem>
+  <TagListItem>リアルタイムデータ処理</TagListItem>
+  <TagListItem>SEO最適化</TagListItem>
+</TagList>
+
+<Blockquote
+  author={{ name: '山田 太郎', role: '株式会社ABC CTO' }}
+  image={{ src: imageTeam }}
+>
+  Engageと協力することで、開発スピードが大幅に向上しました。特に、リアルタイムデータ処理とクラウド最適化の面で大きな成果を得ることができました。
+</Blockquote>
+
+<StatList>
+  <StatListItem value="35%" label="検索トラフィック増加" />
+  <StatListItem value="2倍" label="開発スピード向上" />
+  <StatListItem value="50%" label="サーバーコスト削減" />
+  <StatListItem value="99.9%" label="稼働率" />
+</StatList>
