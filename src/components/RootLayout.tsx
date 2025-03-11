@@ -81,7 +81,7 @@ function Header({
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="mailto:info@amu-lab.com" invert={invert}>
-            Contact us
+            お問い合わせ
           </Button>
           {/* <button
             ref={toggleRef}
