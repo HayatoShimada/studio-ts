@@ -35,14 +35,15 @@ export function Offices({
         <Office name="営業担当" invert={invert}>
           吉田和弥
           <br />
-          kazuya_yoshida@amu-lab.com
+          info@amu-lab.com
+
         </Office>
       </li>
       <li>
         <Office name="開発担当" invert={invert}>
           島田迅人
           <br />
-          info@amu-lab.com
+          <a href="https://github.com/HayatoShimada" >GitHub</a>
         </Office>
       </li>
     </ul>
