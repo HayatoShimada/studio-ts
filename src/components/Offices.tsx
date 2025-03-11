@@ -35,8 +35,7 @@ export function Offices({
         <Office name="営業担当" invert={invert}>
           吉田和弥
           <br />
-          info@amu-lab.com
-
+          <a href="mailto:info@amu-lab.com">info@amu-lab.com</a>
         </Office>
       </li>
       <li>
