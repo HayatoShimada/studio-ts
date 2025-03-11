@@ -8,11 +8,10 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
+import sampleImage from '@/images/amu_midasi.png' // 画像を `public` フォルダに入れる
 
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
-
-
 
 function CaseStudies({
   caseStudies,
@@ -132,16 +131,34 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
-            テクノロジーを編む
-          </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            私たちはテクノロジーを身近に感じることができる世界を目指しています。
-          </p>
-        </FadeIn>
-      </Container>
+        <div className="flex flex-col items-center gap-10 md:flex-row md:items-start">
+          {/* テキスト部分 */}
+          <FadeIn className="max-w-3xl">
+            <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
+              テクノロジーを編む
+            </h1>
+            <p className="mt-6 text-xl text-neutral-600">
+              私たちはテクノロジーを身近に感じる世界を目指しています。
+            </p>
+            <p className="mt-6 text-xl text-neutral-600">
+              本当にテクノロジーが必要なのは、介護や保育などのIT化が進んでいないシーンです。
+            </p>
+            <p className="mt-6 text-xl text-neutral-600">
+              働く人に寄り添った解決策を提供し、働く現場を支えていきます。
+            </p>
+          </FadeIn>
 
+          {/* 画像部分 */}
+          <div className="w-full md:w-1/2">
+            <Image
+              src={sampleImage}
+              alt="ロゴ"
+              className="h-auto w-full"
+              priority
+            />
+          </div>
+        </div>
+      </Container>
 
       {/* <CaseStudies caseStudies={caseStudies} /> */}
 
