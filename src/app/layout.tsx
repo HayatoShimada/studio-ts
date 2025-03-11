@@ -1,7 +1,6 @@
 import { type Metadata } from 'next'
 
 import { RootLayout } from '@/components/RootLayout'
-import { Footer } from '@/components/Footer'
 
 import '@/styles/tailwind.css'
 
