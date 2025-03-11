@@ -80,7 +80,7 @@ function Header({
           />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="/contact" invert={invert}>
+          <Button href="mailto:info@amu-lab.com" invert={invert}>
             Contact us
           </Button>
           {/* <button
@@ -268,8 +268,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           />
 
           <main className="w-full flex-auto">{children}</main>
-
           <Footer />
+
         </motion.div>
       </motion.div>
     </MotionConfig>
