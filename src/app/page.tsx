@@ -26,7 +26,7 @@ function CaseStudies({
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          テクノロジーの力が必要なのは、介護や保育など、まだまだIT化が進んでいない現場です。
+          本当にテクノロジーの力が必要なのは、介護や保育など、まだまだIT化が進んでいない現場です。
           <br />
           そういった現場に寄り添った解決策を提供し、支えていくことが私たちの使命です。
         </p>
@@ -83,9 +83,9 @@ function Teams() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          医療・産業のリードカンパニー出身の営業と、
+          医療・産業のリードカンパニー出身の営業と
           <br />
-          プラント制御・社内DXのエンジニアがチームを組み、
+          プラント制御・社内DXのエンジニアがチームを組み
           <br />
           あなたのDXを支えます。
         </p>
@@ -143,10 +143,9 @@ export default async function Home() {
       </Container>
 
 
-      <CaseStudies caseStudies={caseStudies} />
+      {/* <CaseStudies caseStudies={caseStudies} /> */}
 
       <Teams />
-
       <ContactSection />
     </>
   )

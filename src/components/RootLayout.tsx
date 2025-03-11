@@ -83,7 +83,7 @@ function Header({
           <Button href="/contact" invert={invert}>
             Contact us
           </Button>
-          <button
+          {/* <button
             ref={toggleRef}
             type="button"
             onClick={onToggle}
@@ -103,7 +103,7 @@ function Header({
                   : 'fill-neutral-950 group-hover:fill-neutral-700',
               )}
             />
-          </button>
+          </button> */}
         </div>
       </div>
     </Container>

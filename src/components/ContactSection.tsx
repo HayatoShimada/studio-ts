@@ -10,11 +10,11 @@ export function ContactSection() {
         <div className="mx-auto max-w-4xl">
           <div className="max-w-xl">
             <h2 className="font-display text-3xl font-medium [text-wrap:balance] text-white sm:text-4xl">
-              Tell us about your project
+              あなたのプロジェクトを教えて下さい。
             </h2>
             <div className="mt-6 flex">
-              <Button href="/contact" invert>
-                Say Hej
+              <Button href="mailto:info@amu-lab.com" invert>
+                お問い合わせ
               </Button>
             </div>
             <div className="mt-10 border-t border-white/10 pt-10">
