@@ -43,7 +43,7 @@ export function Offices({
         <Office name="開発担当" invert={invert}>
           島田迅人
           <br />
-          <a href="https://github.com/HayatoShimada" >GitHub</a>
+          <a href="https://github.com/Amu-Technology" >GitHub</a>
         </Office>
       </li>
     </ul>
