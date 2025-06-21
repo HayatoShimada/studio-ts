@@ -1,3 +1,4 @@
+import React from 'react'
 import clsx from 'clsx'
 
 type ContainerProps<T extends React.ElementType> = {

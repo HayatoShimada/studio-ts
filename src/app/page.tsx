@@ -1,3 +1,4 @@
+import React from 'react'
 import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -27,7 +28,7 @@ function CaseStudies({
         <p>
           本当にテクノロジーの力が必要なのは、介護や保育など、まだまだIT化が進んでいない現場です。
           <br />
-          そういった現場に寄り添った解決策を提供し、支えていくことが私たちの使命です。
+          寄り添った解決策を提供し、支えていくことが私たちの使命です。
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -86,7 +87,7 @@ function Teams() {
           <br />
           プラント制御・社内DXのエンジニアがチームを組み
           <br />
-          あなたのDXを支えます。
+          現場のDXを支えます。
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -102,16 +103,13 @@ function Teams() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Web development">
-              Webサービスの開発は、私たちの得意分野です。
-              モックアップをスピーディーに作成し、イメージを実現していきます。
+              スピーディーなモックアップ制作でお客様のイメージを具体化し、理想のウェブサイトを構築します。
             </ListItem>
             <ListItem title="Application development">
-              データベースを活用したウェブアプリケーションの開発が得意分野です。
-              お客様のニーズに合わせたアプリケーションを提供します。
+              データベースを活用したウェブアプリケーション開発を得意としています。お客様のニーズに合わせた最適なアプリケーションを提供いたします。
             </ListItem>
-            <ListItem title="IoT Sencing">
-              小規模なIoTセンシングの開発も得意分野です。
-              お客様のニーズに合わせたセンシングとアプリケーションを提供します。
+            <ListItem title="IoT Sensing">
+              小規模なIoTセンシングシステムの開発にも対応可能です。センサーの選定からアプリケーション開発まで、一貫してサポートします。
             </ListItem>
           </List>
         </div>
@@ -135,16 +133,16 @@ export default async function Home() {
           {/* テキスト部分 */}
           <FadeIn className="max-w-3xl">
             <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
-              テクノロジーを編む
+              テクノロジーを、編むように。
             </h1>
             <p className="mt-6 text-xl text-neutral-600">
-              私たちはテクノロジーを身近に感じる世界を目指しています。
+              私たちは、すべての人がテクノロジーと自然に心を通わせられる、そんな未来を思い描いています。
             </p>
             <p className="mt-6 text-xl text-neutral-600">
-              本当にテクノロジーが必要なのは、介護や保育などのIT化が進んでいないシーンです。
+              特に、介護や保育のように、人と人との繋がりを大切にする現場にこそ、優しいテクノロジーが必要です。
             </p>
             <p className="mt-6 text-xl text-neutral-600">
-              働く人に寄り添った解決策を提供し、働く現場を支えていきます。
+              現場の声に耳を澄ませ、働く一人ひとりの負担を減らすこと。温かい解決策で、日々の仕事を支えます。
             </p>
           </FadeIn>
 

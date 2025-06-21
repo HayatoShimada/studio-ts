@@ -119,7 +119,7 @@ export function Footer() {
             <Logo className="h-8" />
           </Link>
           <p className="text-sm text-neutral-700">
-            © amu-lab Inc. {new Date().getFullYear()}
+            © 株式会社 Amu-Technologies {new Date().getFullYear()}
           </p>
         </div>
     </Container>

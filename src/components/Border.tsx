@@ -1,3 +1,4 @@
+import React from 'react'
 import clsx from 'clsx'
 
 type BorderProps<T extends React.ElementType> = {

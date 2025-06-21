@@ -1,3 +1,4 @@
+import React from 'react'
 import clsx from 'clsx'
 
 import { Border } from '@/components/Border'
