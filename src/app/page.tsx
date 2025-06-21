@@ -9,10 +9,12 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
+import { Button } from '@/components/Button'
 import sampleImage from '@/images/amu_midasi.png' // 画像を `public` フォルダに入れる
 
 import imageLaptop from '@/images/laptop.jpg'
-import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import { type CaseStudy, type MDXEntry, loadCaseStudies, loadArticles, type Article } from '@/lib/mdx'
+import { formatDate } from '@/lib/formatDate'
 
 function CaseStudies({
   caseStudies,
@@ -118,6 +120,84 @@ function Teams() {
   )
 }
 
+function BlogSection({
+  articles,
+}: {
+  articles: Array<MDXEntry<Article>>
+}) {
+  return (
+    <>
+      <SectionIntro
+        eyebrow="Blog"
+        title="最新の記事とニュース"
+        className="mt-24 sm:mt-32 lg:mt-40"
+      >
+        <p>
+          テクノロジーの最新動向や、私たちの取り組みについて
+          <br />
+          定期的に情報をお届けしています。
+        </p>
+      </SectionIntro>
+      <Container className="mt-16">
+        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          {articles.slice(0, 3).map((article) => (
+            <FadeIn key={article.href} className="flex">
+              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+                <h3>
+                  <Link href={article.href}>
+                    <span className="absolute inset-0 rounded-3xl" />
+                  </Link>
+                </h3>
+                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
+                  <time
+                    dateTime={article.date}
+                    className="font-semibold"
+                  >
+                    {formatDate(article.date)}
+                  </time>
+                  <span className="text-neutral-300" aria-hidden="true">
+                    /
+                  </span>
+                  <span>Blog</span>
+                </p>
+                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+                  {article.title}
+                </p>
+                <p className="mt-4 text-base text-neutral-600">
+                  {article.description}
+                </p>
+                <div className="mt-6 flex items-center gap-x-4">
+                  <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">
+                    <Image
+                      alt=""
+                      {...article.author.image}
+                      className="h-12 w-12 object-cover grayscale"
+                    />
+                  </div>
+                  <div className="text-sm text-neutral-950">
+                    <div className="font-semibold">
+                      {article.author.name}
+                    </div>
+                    <div>{article.author.role}</div>
+                  </div>
+                </div>
+              </article>
+            </FadeIn>
+          ))}
+        </FadeInStagger>
+        <div className="mt-16 flex justify-center">
+          <Button href="/blog" className="group">
+            すべての記事を見る
+            <span className="ml-2 transition group-hover:translate-x-1">
+              →
+            </span>
+          </Button>
+        </div>
+      </Container>
+    </>
+  )
+}
+
 export const metadata: Metadata = {
   description:
     'We are a development studio working at the intersection of design and technology.',
@@ -125,6 +205,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   let caseStudies = (await loadCaseStudies()).slice(0, 3)
+  let articles = await loadArticles()
 
   return (
     <>
@@ -161,6 +242,7 @@ export default async function Home() {
       {/* <CaseStudies caseStudies={caseStudies} /> */}
 
       <Teams />
+      <BlogSection articles={articles} />
       <ContactSection />
     </>
   )

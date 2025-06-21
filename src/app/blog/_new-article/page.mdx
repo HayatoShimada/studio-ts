@@ -1,0 +1,53 @@
+import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
+
+export const article = {
+  date: '2024-01-01',
+  title: '新しい記事のタイトル',
+  description: '記事の説明文',
+  author: {
+    name: '島田迅人',
+    role: '開発担当',
+    image: { src: imageChelseaHagon },
+  },
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+# 新しい記事のタイトル
+
+これは新しいMDXファイルで作成された記事です。
+
+## セクション1
+
+通常のMarkdown記法が使えます。
+
+### 統計リスト
+
+<StatList>
+  <StatListItem value="100%" label="満足度" />
+  <StatListItem value="50+" label="プロジェクト数" />
+  <StatListItem value="24/7" label="サポート" />
+</StatList>
+
+### タグリスト
+
+<TagList>
+  <TagListItem>React</TagListItem>
+  <TagListItem>Next.js</TagListItem>
+  <TagListItem>TypeScript</TagListItem>
+</TagList>
+
+### 引用
+
+<Blockquote>
+  これは引用文です。重要なポイントを強調するのに使えます。
+</Blockquote>
+
+### トップティップ
+
+<TopTip>
+  これは重要なヒントや注意事項を表示するためのコンポーネントです。
+</TopTip> 
