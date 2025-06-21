@@ -133,15 +133,15 @@ export default async function Home() {
           {/* テキスト部分 */}
           <FadeIn className="max-w-3xl">
             <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
-              テクノロジーを、編むように。
+              テクノロジーを編む
             </h1>
-            <p className="mt-6 text-xl text-neutral-600">
+            <p className="mt-6 text-lg text-neutral-600">
               私たちは、すべての人がテクノロジーと自然に心を通わせられる、そんな未来を思い描いています。
             </p>
-            <p className="mt-6 text-xl text-neutral-600">
+            <p className="mt-6 text-lg text-neutral-600">
               特に、介護や保育のように、人と人との繋がりを大切にする現場にこそ、優しいテクノロジーが必要です。
             </p>
-            <p className="mt-6 text-xl text-neutral-600">
+            <p className="mt-6 text-lg text-neutral-600">
               現場の声に耳を澄ませ、働く一人ひとりの負担を減らすこと。温かい解決策で、日々の仕事を支えます。
             </p>
           </FadeIn>
